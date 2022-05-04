@@ -92,16 +92,8 @@ class App extends React.Component {
   };
 
   render() {
-    const { products } = this.state;
     return (
       <div className="grid-container">
-        <h1>Listar produtos</h1>
-        {products.map((product) => (
-          <li key={product.id}>
-            {product.attributes.title}
-          </li>
-        ))}
-
         <header>
           <a href="https://www.dhl.com/en/express/tracking.html">
             DHL Express Tracking

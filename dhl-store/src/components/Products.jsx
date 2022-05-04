@@ -25,7 +25,7 @@ export default class Products extends Component {
         <Fade bottom cascade>
           <ul className="products">
             {this.props.products.map((product) => (
-              <li key={product.id} className="rainbow">
+              <li key={product.id} className="">
                 <div className="product">
                   <a
                     href={"#" + product.id}
@@ -39,8 +39,12 @@ export default class Products extends Component {
                         />
                       </div>
                     </div>
-
-                    <p>{product.title}</p>
+                    <div className="content-title-product">
+                      <div>{product.attributes.title}</div>
+                    </div>
+                    <div className="content-description-product">
+                      <div>{product.attributes.description}</div>
+                    </div>
                   </a>
                   <div className="product-price">
                     <div>{formatCurrency(product.attributes.price)}</div>

@@ -19,14 +19,14 @@ export default class Cart extends Component {
             <Fade left cascade>
               <ul className="cart-items">
                 {cartItems.map((item) => (
-                  <li key={item._id}>
+                  <li key={item.id}>
                     <div>
-                      <img src={item.image} alt={item.title}></img>
+                      <img src={item.attributes.link_image} alt={item.attributes.title}></img>
                     </div>
                     <div>
-                      <div>{item.title}</div>
+                      <div>{item.attributes.title}</div>
                       <div className="right">
-                        {formatCurrency(item.price)} x {item.count}
+                        {formatCurrency(item.attributes.price)} x {item.count}
                         <button
                           className="button"
                           onClick={() => this.props.removeFromCart(item)}
@@ -47,7 +47,7 @@ export default class Cart extends Component {
                   TOTAL:
                   {formatCurrency(
                     cartItems.reduce(
-                      (acc, item) => acc + item.price * item.count,
+                      (acc, item) => acc + item.attributes.price * item.count,
                       0
                     )
                   )}

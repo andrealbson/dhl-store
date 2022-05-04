@@ -3,6 +3,7 @@ import Products from "./components/Products";
 import Filter from "./components/Filter";
 import Cart from "./components/Cart";
 import api from "./services/api";
+import Header from "./components/NavBar/Navbar.jsx";
 
 class App extends React.Component {
   state = {
@@ -93,36 +94,34 @@ class App extends React.Component {
 
   render() {
     return (
-      <div className="grid-container">
-        <header>
-          <a href="https://www.dhl.com/en/express/tracking.html">
-            DHL Express Tracking
-          </a>
-        </header>
-        <main>
-          <div className="content">
-            <div className="main">
-              <Filter
-                count={this.state.products.length}
-                sort={this.state.sort}
-                filterProducts={this.filterProducts}
-                sortProducts={this.sortProducts}
-              />
-              <Products
-                products={this.state.products}
-                addToCart={this.addToCart}
-              />
+      <>
+        <Header />
+        <div className="grid-container">
+          <main>
+            <div className="content">
+              <div className="main">
+                <Filter
+                  count={this.state.products.length}
+                  sort={this.state.sort}
+                  filterProducts={this.filterProducts}
+                  sortProducts={this.sortProducts}
+                />
+                <Products
+                  products={this.state.products}
+                  addToCart={this.addToCart}
+                />
+              </div>
+              <div className="sidebar">
+                <Cart
+                  cartItems={this.state.cartItems}
+                  removeFromCart={this.removeFromCart}
+                />
+              </div>
             </div>
-            <div className="sidebar">
-              <Cart
-                cartItems={this.state.cartItems}
-                removeFromCart={this.removeFromCart}
-              />
-            </div>
-          </div>
-        </main>
-        <footer>Todos os direitos reservados</footer>
-      </div>
+          </main>
+          <footer>Todos os direitos reservados</footer>
+        </div>
+      </>
     );
   }
 }

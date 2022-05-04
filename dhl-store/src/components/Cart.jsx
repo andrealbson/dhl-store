@@ -6,12 +6,20 @@ export default class Cart extends Component {
   render() {
     const { cartItems } = this.props;
     return (
-      <div>
+      <div className="card">
         {cartItems.length === 0 ? (
-          <div className="cart cart-header">Cart is empty</div>
+          <div className="cart cart-header text-muted">
+            <i className="bi bi-cart text-danger"></i> &nbsp;Carrinho está vazio
+            por enquanto
+          </div>
         ) : (
           <div className="cart cart-header">
-            You have {cartItems.length} in the cart
+            <i className="bi bi-cart-fill text-danger"></i>&nbsp;Itens no meu
+            carrinho:&nbsp;
+            <span className="badge bg-danger" id="qtd-cart">
+              {cartItems.length}
+            </span>
+            &nbsp;
           </div>
         )}
         <div>
@@ -21,7 +29,10 @@ export default class Cart extends Component {
                 {cartItems.map((item) => (
                   <li key={item.id}>
                     <div>
-                      <img src={item.attributes.link_image} alt={item.attributes.title}></img>
+                      <img
+                        src={item.attributes.link_image}
+                        alt={item.attributes.title}
+                      ></img>
                     </div>
                     <div>
                       <div>{item.attributes.title}</div>

@@ -95,6 +95,24 @@ footer {
   align-items: center;
 }
 
+.badge {
+  display: inline-block;
+  padding: 0.35em 0.65em;
+  font-size: .75em;
+  font-weight: 700;
+  line-height: 1;
+  color: #fff;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: 0.25rem;
+  background-color: #203040;
+}
+
+.rounded-pill {
+  border-radius: 50rem !important;
+}
+
 .content {
   display: flex;
   flex-wrap: wrap;

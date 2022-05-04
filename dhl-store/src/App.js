@@ -4,6 +4,7 @@ import Filter from "./components/Filter";
 import Cart from "./components/Cart";
 import api from "./services/api";
 import Header from "./components/NavBar/Navbar.jsx";
+import SlideCarousel from "./components/Carousel/index.jsx";
 
 class App extends React.Component {
   state = {
@@ -96,6 +97,7 @@ class App extends React.Component {
     return (
       <>
         <Header />
+        <SlideCarousel />
         <div className="grid-container">
           <main>
             <div className="content">

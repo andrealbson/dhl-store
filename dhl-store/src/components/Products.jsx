@@ -25,17 +25,25 @@ export default class Products extends Component {
         <Fade bottom cascade>
           <ul className="products">
             {this.props.products.map((product) => (
-              <li key={product._id}>
+              <li key={product.id} className="rainbow">
                 <div className="product">
                   <a
-                    href={"#" + product._id}
+                    href={"#" + product.id}
                     onClick={() => this.openModal(product)}
                   >
-                    <img src={product.image} alt={product.title} />
+                    <div className="content-image-product">
+                      <div>
+                        <img
+                          src={product.attributes.link_image}
+                          alt={product.attributes.title}
+                        />
+                      </div>
+                    </div>
+
                     <p>{product.title}</p>
                   </a>
                   <div className="product-price">
-                    <div>{formatCurrency(product.price)}</div>
+                    <div>{formatCurrency(product.attributes.price)}</div>
                     <button
                       onClick={() => this.props.addToCart(product)}
                       className="button primary"
@@ -55,13 +63,16 @@ export default class Products extends Component {
                 Fechar
               </button>
               <div className="product-details">
-                <img src={product.image} alt={product.title} />
+                <img
+                  src={product.attributes.link_image}
+                  alt={product.attributes.title}
+                />
                 <div className="product-details-description">
-                  <p>{product.title}</p>
-                  <p>{product.description}</p>
+                  <p>{product.attributes.title}</p>
+                  <p>{product.attributes.description}</p>
                   <hr />
                   <p className="product-price">
-                    <div>{formatCurrency(product.price)}</div>
+                    <div>{formatCurrency(product.attributes.price)}</div>
                     <button
                       className="button primary"
                       onClick={(e) => {

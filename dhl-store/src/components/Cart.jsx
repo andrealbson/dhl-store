@@ -28,21 +28,21 @@ export default class Cart extends Component {
               <ul className="cart-items">
                 {cartItems.map((item) => (
                   <li key={item.id}>
-                    <div>
+                    <div className="img-cart-items-list">
                       <img
                         src={item.attributes.link_image}
                         alt={item.attributes.title}
                       ></img>
                     </div>
                     <div>
-                      <div>{item.attributes.title}</div>
+                      <div className="cart-items-list-title">{item.attributes.title}</div>
                       <div className="right">
                         {formatCurrency(item.attributes.price)} x {item.count}
                         <button
-                          className="button"
+                          className="btn btn-sm btn-danger"
                           onClick={() => this.props.removeFromCart(item)}
                         >
-                          Remove
+                          <i class="fa-solid fa-xmark"></i>
                         </button>
                       </div>
                     </div>

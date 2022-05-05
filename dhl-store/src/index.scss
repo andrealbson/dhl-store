@@ -111,11 +111,14 @@ div.ReactModal__Overlay--after-open {
 
 footer {
   grid-area: footer;
-  background-color: #203040;
+  background-color: #842029;
   color: #ffffff;
   display: flex;
   justify-content: center;
   align-items: center;
+  filter: drop-shadow(5px 5px 5px rgba(0,0,0,0.3)) !important;
+  font-family: 'Nunito', sans-serif !important;
+  text-transform: uppercase;
 }
 
 .badge {

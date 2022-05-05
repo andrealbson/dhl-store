@@ -5,7 +5,7 @@ export default class Filter extends Component {
     return (
       <div className="filter">
         <div className="filter-result">
-        <span class="badge bg-secondary">{this.props.count}</span> <span className="legend-produts text-muted">Produtos</span>
+        <span className="badge bg-secondary">{this.props.count}</span> <span className="legend-produts text-muted">Produtos</span>
         </div>
         <div className="filter-sort">
           Listar por:

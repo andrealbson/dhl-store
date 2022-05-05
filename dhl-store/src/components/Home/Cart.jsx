@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import formatCurrency from "./../util";
+import formatCurrency from "../../util";
 import { Fade } from "react-reveal";
 
 export default class Cart extends Component {

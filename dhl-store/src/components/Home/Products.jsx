@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import formatCurrency from "./../util";
+import formatCurrency from "../../util";
 import { Fade, Zoom } from "react-reveal";
 import Modal from "react-modal/lib/components/Modal";
 export default class Products extends Component {
@@ -26,10 +26,10 @@ export default class Products extends Component {
           <ul className="products">
             {this.props.products.map((product) => (
               <li key={product.id} className="">
-                <div class="ribbon">
+                <div className="ribbon">
                   {Math.random().toFixed(1) * (10 - 0) >= 7 && (
-                    <div class="wrap">
-                      <span class="ribbon-ultimas">Últimas unidades</span>
+                    <div className="wrap">
+                      <span className="ribbon-ultimas">Últimas unidades</span>
                     </div>
                   )}
                 </div>

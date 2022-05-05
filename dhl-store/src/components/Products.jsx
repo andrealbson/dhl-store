@@ -26,6 +26,11 @@ export default class Products extends Component {
           <ul className="products">
             {this.props.products.map((product) => (
               <li key={product.id} className="">
+                <div class="ribbon">
+      <div class="wrap">
+        <span class="ribbon-ultimas">Últimas unidades</span>
+      </div>
+    </div>
                 <div className="product">
                   <a
                     href={"#" + product.id}
@@ -45,15 +50,67 @@ export default class Products extends Component {
                     <div className="content-description-product">
                       <div>{product.attributes.description}</div>
                     </div>
+                    <div className="content-rating-spins-product">
+                      <div>
+                        <i className="fa-solid fa-star"></i>
+                        <i className="fa-solid fa-star"></i>
+                        <i className="fa-solid fa-star"></i>
+                        <i className="fa-solid fa-star"></i>
+                        <i className="fa-solid fa-star-half-stroke"></i>
+                      </div>
+                      <div className="">
+                        <i className="fa-solid fa-bolt-lightning"></i>&nbsp;APENAS
+                        HOJE!
+                      </div>
+                    </div>
+                    <div className="content-oldprice-product">
+                      <div>
+                        <div className="old-price">
+                          <span>
+                            {formatCurrency(product.attributes.price)}
+                          </span>
+                        </div>
+                      </div>
+                      <div className="promotional-badge">
+                        <i className="fa-solid fa-arrow-trend-down"></i>&nbsp;
+                        {Math.round((product.attributes.price * 2) / 100)}% OFF
+                      </div>
+                    </div>
                   </a>
                   <div className="product-price">
-                    <div>{formatCurrency(product.attributes.price)}</div>
-                    <button
-                      onClick={() => this.props.addToCart(product)}
-                      className="button primary"
-                    >
-                      Add To Cart
-                    </button>
+                    <div className="text-price">
+                      {formatCurrency(product.attributes.price_promotional)}
+                    </div>
+                    <div></div>
+                  </div>
+                  <div className="dividers-pay">
+                    <span className="text-muted">6x de R$ 0,00 s/juros</span>
+                  </div>
+                  <div className="footer-card">
+                    <div>
+                      <button
+                        onClick={() => this.props.addToCart(product)}
+                        className=""
+                      >
+                        <i className="fa-solid fa-eye fa-lg"></i>
+                      </button>
+                    </div>
+                    <div>
+                      <button
+                        onClick={() => this.props.addToCart(product)}
+                        className=""
+                      >
+                        <i className="fa-solid fa-heart fa-lg"></i>
+                      </button>
+                    </div>
+                    <div>
+                      <button
+                        onClick={() => this.props.addToCart(product)}
+                        className=""
+                      >
+                        <i className="fa-solid fa-cart-plus fa-lg"></i>
+                      </button>
+                    </div>
                   </div>
                 </div>
               </li>

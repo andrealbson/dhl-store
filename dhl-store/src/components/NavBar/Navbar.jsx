@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import Logo from "../../images/logo.png";
@@ -85,7 +86,7 @@ export default class Header extends Component {
                       </a>
                     </div>
                     <div className="content-icons">
-                      <a href="/#">
+                      <Link to="/login">
                         <div className="flex-content-user">
                           <div>
                             <i className="bi bi-person icon-toggle"></i>
@@ -97,7 +98,7 @@ export default class Header extends Component {
                             </div>
                           </div>
                         </div>
-                      </a>
+                      </Link>
                     </div>
                     <div className="content-icons">
                       <a href="/#">

@@ -208,10 +208,12 @@ footer {
           }
 
           &:hover {
-            background-color: red !important;
+            background-color: #ff4959 !important;
+            box-shadow: 0 12px 21px -5px black;
             transition: all 0.3s ease-in-out !important;
             color: #FFF !important;
-            border-radius: 35%;
+            border-radius: 50%;
+            transform: scale(1.07);
 
             i {
               color: #FFF !important;
@@ -674,19 +676,19 @@ footer {
 }
 
 .btn-pay-now {
-  color: #0f5132;
-  background-color: #d1e7dd !important;
-  border-color: #badbcc !important;
+  color: #FFF;
+  background: linear-gradient(-45deg, #ff4959 0%, #842029 100%) !important;
+  border-color: #ce6969 !important;
   font-family: 'Nunito', sans-serif !important;
   border-radius: 5%;
   font-weight: 900;
   text-transform: uppercase;
   filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.3));
-  transition: all 0.3s ease;
+  // transition: all 1s ease;
 
   &:hover {
-    transition: all 0.3s ease;
-    background-color: #a0c5b5 !important;
+    // transition: all 1s ease;
+    background: #a0c5b5 !important;
     border-color: #8bbba5 !important;
     color: #2b3f36;
   }

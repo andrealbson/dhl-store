@@ -5,6 +5,7 @@ import Cart from "./components/Cart";
 import api from "./services/api";
 import Header from "./components/NavBar/Navbar.jsx";
 import SlideCarousel from "./components/Carousel/index.jsx";
+// import { Banner } from './components/Banner/index';
 
 class App extends React.Component {
   state = {
@@ -98,6 +99,7 @@ class App extends React.Component {
       <>
         <Header />
         <SlideCarousel />
+        {/* <Banner /> */}
         <div className="grid-container">
           <main>
             <div className="content">

@@ -8,7 +8,7 @@ export default class Filter extends Component {
         <span class="badge bg-secondary">{this.props.count}</span> <span className="legend-produts text-muted">Produtos</span>
         </div>
         <div className="filter-sort">
-          Exibir por:
+          Listar por:
           <select className="select"
             value={this.props.sort}
             onChange={this.props.sortProducts}

@@ -27,10 +27,12 @@ export default class Products extends Component {
             {this.props.products.map((product) => (
               <li key={product.id} className="">
                 <div class="ribbon">
-      <div class="wrap">
-        <span class="ribbon-ultimas">Últimas unidades</span>
-      </div>
-    </div>
+                  {Math.random().toFixed(1) * (10 - 0) >= 7 && (
+                    <div class="wrap">
+                      <span class="ribbon-ultimas">Últimas unidades</span>
+                    </div>
+                  )}
+                </div>
                 <div className="product">
                   <a
                     href={"#" + product.id}
@@ -59,8 +61,8 @@ export default class Products extends Component {
                         <i className="fa-solid fa-star-half-stroke"></i>
                       </div>
                       <div className="">
-                        <i className="fa-solid fa-bolt-lightning"></i>&nbsp;APENAS
-                        HOJE!
+                        <i className="fa-solid fa-bolt-lightning"></i>
+                        &nbsp;APENAS HOJE!
                       </div>
                     </div>
                     <div className="content-oldprice-product">
@@ -73,7 +75,7 @@ export default class Products extends Component {
                       </div>
                       <div className="promotional-badge">
                         <i className="fa-solid fa-arrow-trend-down"></i>&nbsp;
-                        {Math.round((product.attributes.price * 2) / 100)}% OFF
+                        {Math.random().toFixed(1) * (20 - 0)}% OFF
                       </div>
                     </div>
                   </a>

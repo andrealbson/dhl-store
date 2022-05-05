@@ -5,32 +5,30 @@ export default class Filter extends Component {
     return (
       <div className="filter">
         <div className="filter-result">
-          {this.props.count} Products
+        <span class="badge bg-secondary">{this.props.count}</span> <span className="legend-produts text-muted">Produtos</span>
         </div>
         <div className="filter-sort">
-          Order
-          <select
+          Exibir por:
+          <select className="select"
             value={this.props.sort}
             onChange={this.props.sortProducts}
           >
-            <option value="latest">Latest</option>
-            <option value="lowest">Lowest</option>
-            <option value="highest">Highest</option>
+            <option value="latest">Novidades</option>
+            <option value="lowest">Menor Preço</option>
+            <option value="highest">Mais vendidos</option>
           </select>
         </div>
-        <div className="filter-size">
-          Filter
-          <select
+        <div className="filter-sort filter-size">
+          Filtrar por:
+          <select className="select"
             value={this.props.size}
             onChange={this.props.filterProducts}
           >
-            <option value="">ALL</option>
-            <option value="XS">XS</option>
-            <option value="S">S</option>
-            <option value="M">M</option>
-            <option value="L">L</option>
-            <option value="XL">XL</option>
-            <option value="XXL">XXL</option>
+            <option value="">Selecione uma opção</option>
+            <option value="XS">Popularidade</option>
+            <option value="S">Melhores avaliados</option>
+            <option value="M">Em Promoção</option>
+            <option value="L">Com desonto à vista</option>
           </select>
         </div>
       </div>

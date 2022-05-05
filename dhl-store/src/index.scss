@@ -652,6 +652,46 @@ footer {
   flex: 1;
 }
 
+.cart-total {
+  border: 1px solid #c4c4c4;
+  background-color: #f1f1f1;
+  border-radius: 4px;
+  font-family: 'Nunito', sans-serif !important;
+
+  .cart-total-title {
+    font-weight: 700;
+    margin-bottom: 0.5em;
+    font-size: 1.3rem !important;
+    color: rgb(110, 110, 110);
+    width: 100%;
+  }
+
+  .cart-total-value {
+    border-top: 1px dashed #c4c4c4;
+    font-weight: 900;
+    color: #203040;
+  }
+}
+
+.btn-pay-now {
+  color: #0f5132;
+  background-color: #d1e7dd !important;
+  border-color: #badbcc !important;
+  font-family: 'Nunito', sans-serif !important;
+  border-radius: 5%;
+  font-weight: 900;
+  text-transform: uppercase;
+  filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.3));
+  transition: all 0.3s ease;
+
+  &:hover {
+    transition: all 0.3s ease;
+    background-color: #a0c5b5 !important;
+    border-color: #8bbba5 !important;
+    color: #2b3f36;
+  }
+}
+
 /* Checkout form */
 form {
   width: 100%;

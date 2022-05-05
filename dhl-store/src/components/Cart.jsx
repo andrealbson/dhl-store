@@ -35,14 +35,16 @@ export default class Cart extends Component {
                       ></img>
                     </div>
                     <div>
-                      <div className="cart-items-list-title">{item.attributes.title}</div>
+                      <div className="cart-items-list-title">
+                        {item.attributes.title}
+                      </div>
                       <div className="right">
                         {formatCurrency(item.attributes.price)} x {item.count}
                         <button
                           className="btn btn-sm btn-danger"
                           onClick={() => this.props.removeFromCart(item)}
                         >
-                          <i class="fa-solid fa-xmark"></i>
+                          <i className="fa-solid fa-xmark"></i>
                         </button>
                       </div>
                     </div>
@@ -52,18 +54,22 @@ export default class Cart extends Component {
             </Fade>
           </div>
           {cartItems.length !== 0 && (
-            <div className="cart">
+            <div className="cart cart-total">
               <div className="total">
                 <div>
-                  TOTAL:
-                  {formatCurrency(
-                    cartItems.reduce(
-                      (acc, item) => acc + item.attributes.price * item.count,
-                      0
-                    )
-                  )}
+                  <span className="cart-total-title">TOTAL: </span>
+                  <span className="cart-total-value">
+                    {formatCurrency(
+                      cartItems.reduce(
+                        (acc, item) => acc + item.attributes.price * item.count,
+                        0
+                      )
+                    )}
+                  </span>
                 </div>
-                <button className="button primary">Pagar Agora</button>
+              </div>
+              <div>
+                <button className="button primary btn-pay-now">Pagar Agora</button>
               </div>
             </div>
           )}

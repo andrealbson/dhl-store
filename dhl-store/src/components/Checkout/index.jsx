@@ -16,7 +16,7 @@ export default class Checkout extends Component {
 
     return (
       <>
-        <div className="breadcrumb" style={{marginTop: "-27px"}}>
+        <div className="breadcrumb" style={{marginTop: "-59px"}}>
           <Link to="/home" className="breadcrumb__step">
             Página Inicial
           </Link>

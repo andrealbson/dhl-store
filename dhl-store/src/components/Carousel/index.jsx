@@ -11,8 +11,8 @@ export const SlideCarousel = () => {
             <Carousel.Caption>
               <div className="flex-carousel">
                 <div className="content-carousel-01">
-                  <h3 className="font-light font-size-32 text-start ps-5">Complete your look with</h3>
-                  <h2 className="font-bold font-size-48 text-start ps-5">New Men's Accessories</h2>
+                  <h3 className="font-light font-size-32 text-start ps-5">Moda de verão 2022</h3>
+                  <h2 className="font-bold font-size-48 text-start ps-5 text-uppercase">você sempre moda!</h2>
                   <p className="font-book font-size-18 text-start ps-5">
                     Veja as novidades do verão e descubra como você pode
                   </p>
@@ -25,10 +25,10 @@ export const SlideCarousel = () => {
             <Carousel.Caption>
               <div className="flex-carousel">
                 <div className="content-carousel-02">
-                <h3 className="font-light font-size-32 text-start ps-5">Complete seu visual com</h3>
-                  <h2 className="font-bold font-size-48 text-start ps-5">New Men's Accessories</h2>
+                <h3 className="font-light font-size-32 text-start ps-5">Nova linha de tenis esportivo</h3>
+                  <h2 className="font-bold font-size-48 text-start ps-5">Novo NIKE StreetRun</h2>
                   <p className="font-book font-size-18 text-start ps-5">
-                    Veja as novidades do verão e descubra como você pode
+                    Confira as novidades deste lançamento incrível que promete conforte e segurança para você.
                   </p>
                 </div>
                 <div className="image-carousel">Olklk</div>
@@ -39,10 +39,10 @@ export const SlideCarousel = () => {
             <Carousel.Caption>
               <div className="flex-carousel">
                 <div className="content-carousel-03">
-                <h3 className="font-light font-size-32 text-start ps-5">Complete your look with</h3>
-                  <h2 className="font-bold font-size-48 text-start ps-5">New Men's Accessories</h2>
+                <h3 className="font-light font-size-32 text-start ps-5">Acessórios que fazem o seu estilo</h3>
+                  <h2 className="font-bold font-size-48 text-start ps-5">Novo Ryban Style Black</h2>
                   <p className="font-book font-size-18 text-start ps-5">
-                    Veja as novidades do verão e descubra como você pode
+                    O óculos de sol e orelha de sol são os acessórios que você deve ter para seu estilo garantido.
                   </p>
                 </div>
                 <div className="image-carousel">Olklk</div>

@@ -16,6 +16,20 @@ export default class Checkout extends Component {
 
     return (
       <>
+        <div className="breadcrumb" style={{marginTop: "-27px"}}>
+          <Link to="/home" className="breadcrumb__step">
+            Página Inicial
+          </Link>
+          <Link className="breadcrumb__step breadcrumb__step--active" to="/checkout">
+            Checkout
+          </Link>
+          <Link
+            to="/checkoutSuccess"
+            className="breadcrumb__step"
+          >
+            confirmado de Compra
+          </Link>
+        </div>
         <div className="container rounded bg-white">
           <div className="row d-flex justify-content-center pb-5">
             <div className="col-sm-5 col-md-5 ml-1">

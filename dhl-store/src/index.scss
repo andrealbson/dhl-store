@@ -2,6 +2,7 @@
 
 html {
   box-sizing: border-box;
+  overflow-x: hidden !important;
 }
 
 body,
@@ -16,6 +17,10 @@ select,
 button,
 textarea {
   font-family: 'Nunito', sans-serif;
+}
+
+.nav {
+  justify-content: space-around !important;
 }
 
 /* width */
@@ -972,7 +977,8 @@ select.select:hover+svg {
     }
   }
 
-  .content-checkout .breadcrumb__step, .content-success .breadcrumb__step{
+  .content-checkout .breadcrumb__step,
+  .content-success .breadcrumb__step {
     font-size: 9px !important;
   }
 

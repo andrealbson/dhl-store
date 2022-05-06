@@ -64,7 +64,7 @@ export default class Checkout extends Component {
                 <div>
                   <p>
                     <b>Frete padrão:</b>
-                    <br />
+                    <br /> 
                     <span className="green">R$ 71,60</span>
                     <span>Total: {this.state.cartItems.length}</span>
                   </p>
@@ -133,7 +133,7 @@ export default class Checkout extends Component {
                     to="/checkoutSuccess"
                     className="btn btn-primary btn-success"
                   >
-                    <i class="bi bi-bag-check"></i>&nbsp;Finalizar Compra
+                    <i className="bi bi-bag-check"></i>&nbsp;Finalizar Compra
                   </Link>
                 </div>
               </div>
@@ -145,7 +145,7 @@ export default class Checkout extends Component {
                     to="/"
                     className="btn btn-sm btn-danger btn-cancelar-top-checkout"
                   >
-                    <i class="fa-solid fa-arrow-left"></i>&nbsp;Cancelar e
+                    <i className="fa-solid fa-arrow-left"></i>&nbsp;Cancelar e
                     voltar para a página inicial
                   </Link>
                 </h6>

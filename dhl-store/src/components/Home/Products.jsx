@@ -121,7 +121,7 @@ export default class Products extends Component {
           <Modal isOpen={true}>
             <Zoom>
               <button className="close-modal btn btn-sm btn-danger" onClick={this.closeModal}>
-              <i class="fa-solid fa-xmark fa-lg"></i>
+              <i className="fa-solid fa-xmark fa-lg"></i>
               </button>
               <div className="product-details">
                 <img
@@ -141,7 +141,7 @@ export default class Products extends Component {
                         this.closeModal();
                       }}
                     >
-                      <i class="fa-solid fa-cart-plus fa-lg"></i>&nbsp;Adicionar ao carrinho
+                      <i className="fa-solid fa-cart-plus fa-lg"></i>&nbsp;Adicionar ao carrinho
                     </button>
                   </p>
                 </div>

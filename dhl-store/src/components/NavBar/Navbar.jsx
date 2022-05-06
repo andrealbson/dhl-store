@@ -11,7 +11,6 @@ import {
   InputGroup,
   FormControl,
   Button,
-  NavDropdown,
 } from "react-bootstrap";
 
 export default class Header extends Component {
@@ -131,32 +130,19 @@ export default class Header extends Component {
           <nav>
             <div className="container-fluid content-menu">
               <Nav defaultActiveKey="/home" as="ul">
-                <NavDropdown
-                  id="nav-dropdown-dark-example"
-                  title={
-                    <div className="flex-menu-categorias">
-                      <div>
-                        <i className="bi bi-grid icon-categorias"></i>
-                      </div>
-                      <div>
-                        <span>Categorias</span>
-                      </div>
-                    </div>
-                  }
-                  menuVariant="light"
-                >
-                  <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-                  <NavDropdown.Item href="#action/3.2">
-                    Another action
-                  </NavDropdown.Item>
-                  <NavDropdown.Item href="#action/3.3">
-                    Something
-                  </NavDropdown.Item>
-                  <NavDropdown.Divider />
-                  <NavDropdown.Item href="#action/3.4">
-                    Separated link
-                  </NavDropdown.Item>
-                </NavDropdown>
+                
+              <Nav.Item as="li">
+                  
+                </Nav.Item>
+                <Nav.Item as="li">
+                  <Nav.Link
+                    eventKey="link-1"
+                    className="font-size-16 font-book"
+                  >
+                    <i className="fa-solid fa-baby-carriage fa-lg"></i>
+                    Infantil
+                  </Nav.Link>
+                </Nav.Item>
                 <Nav.Item as="li">
                   <Nav.Link
                     eventKey="link-1"
@@ -164,6 +150,15 @@ export default class Header extends Component {
                   >
                     <i className="fa-solid fa-spray-can-sparkles fa-lg"></i>
                     Beleza e Saúde
+                  </Nav.Link>
+                </Nav.Item>
+                <Nav.Item as="li">
+                  <Nav.Link
+                    eventKey="link-1"
+                    className="font-size-16 font-book"
+                  >
+                    <i className="fa-solid fa-kitchen-set fa-lg"></i>
+                    Eletroportáteis
                   </Nav.Link>
                 </Nav.Item>
                 <Nav.Item as="li">

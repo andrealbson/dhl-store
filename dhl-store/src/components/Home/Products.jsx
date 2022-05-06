@@ -120,8 +120,8 @@ export default class Products extends Component {
         {product && (
           <Modal isOpen={true}>
             <Zoom>
-              <button className="close-modal" onClick={this.closeModal}>
-                Fechar
+              <button className="close-modal btn btn-sm btn-danger" onClick={this.closeModal}>
+              <i class="fa-solid fa-xmark fa-lg"></i>
               </button>
               <div className="product-details">
                 <img
@@ -129,19 +129,19 @@ export default class Products extends Component {
                   alt={product.attributes.title}
                 />
                 <div className="product-details-description">
-                  <p>{product.attributes.title}</p>
-                  <p>{product.attributes.description}</p>
+                  <h4 className="">{product.attributes.title}</h4>
+                  <p className="description-product text-muted">{product.attributes.description}</p>
                   <hr />
                   <p className="product-price">
-                    <div>{formatCurrency(product.attributes.price)}</div>
+                    <div className="text-price-modal">{formatCurrency(product.attributes.price)}</div>
                     <button
-                      className="button primary"
+                      className="btn btn-success"
                       onClick={(e) => {
                         this.props.addToCart(product);
                         this.closeModal();
                       }}
                     >
-                      Adicionar ao carrinho
+                      <i class="fa-solid fa-cart-plus fa-lg"></i>&nbsp;Adicionar ao carrinho
                     </button>
                   </p>
                 </div>

@@ -918,6 +918,16 @@ select.select:hover+svg {
   user-select: none;
 }
 
+.description-product {
+  font-family: 'Nunito', sans-serif;
+  font-size: 0.9rem;
+}
+
+.text-price-modal {
+  font-family: 'Nunito', sans-serif;
+  font-weight: 800;
+  margin-bottom: 0.25em;
+}
 
 @media only screen and (min-width: 0px) and (max-width: 768px) {
 
@@ -981,6 +991,10 @@ select.select:hover+svg {
       display: none;
       visibility: hidden;
     }
+  }
+
+  .product-price {
+    flex-direction: column;
   }
 
 }

@@ -68,7 +68,7 @@ export default class CheckOutSuccess extends Component {
                     <h5>Suporte 24h</h5>
                     <p className="line1">
                       Se você tiver com alguma dúvida, entre em contato com
-                      nosso suporte. Será um prazer esclarecer todas as suas
+                      nosso suporte. Será um prazer esclarecer as suas
                       dúvidas.
                     </p>
                   </div>

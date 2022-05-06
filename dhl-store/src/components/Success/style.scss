@@ -19,6 +19,14 @@ $vermelho3: #842029;
 // }
 
 .content-success {
+
+    & {
+        background: linear-gradient(180deg, #fff 10%, #94d185 80%, #FFF 120%);
+        padding-top: 1em;
+        height: 120vh;
+
+    }
+
     .breadcrumb {
         text-align: center;
         display: inline-block;
@@ -26,8 +34,8 @@ $vermelho3: #842029;
         overflow: hidden;
         border-radius: 5px;
         counter-reset: flag;
-        margin-top: -3.7em !important;
-        margin-left: em !important;
+        margin-top: -5.7em !important;
+        margin-left: 0em !important;
         position: absolute;
         background-color: #fff !important;
         width: 100% !important;

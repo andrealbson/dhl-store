@@ -1,10 +1,10 @@
 import React, { Component } from "react";
-import SlideCarousel from "../../../components/Carousel";
-import Cart from "../../../components/Home/Cart";
-import Products from "../../../components/Home/Products";
-import Header from "../../../components/NavBar/Navbar";
-import Filter from "./../../../components/Home/Filter";
-import api from './../../../services/api';
+import SlideCarousel from "../../components/Carousel";
+import Cart from "../../components/Home/Cart";
+import Products from "../../components/Home/Products";
+import Header from "../../components/NavBar/Navbar";
+import Filter from "../../components/Home/Filter";
+import api from '../../services/api';
 
 class Home extends Component {
 

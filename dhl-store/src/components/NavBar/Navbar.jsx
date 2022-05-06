@@ -101,22 +101,27 @@ export default class Header extends Component {
                       </Link>
                     </div>
                     <div className="content-icons">
-                      <a href="/#">
-                        <div className="flex-content-cart">
-                          <div>
-                            <i className="bi bi-cart3 icon-toggle"></i>
-                            <span className="badge-count cart" id="count-cart">
-                              0
-                            </span>
-                          </div>
-                          <div>
-                            <div className="flex-column-cart">
-                              <div>Carrinho</div>
-                              <div>740,00</div>
+                      <Link to="/checkout">
+                        <a href="/#">
+                          <div className="flex-content-cart">
+                            <div>
+                              <i className="bi bi-cart3 icon-toggle"></i>
+                              <span
+                                className="badge-count cart"
+                                id="count-cart"
+                              >
+                                0
+                              </span>
+                            </div>
+                            <div>
+                              <div className="flex-column-cart">
+                                <div>Carrinho</div>
+                                <div>740,00</div>
+                              </div>
                             </div>
                           </div>
-                        </div>
-                      </a>
+                        </a>
+                      </Link>
                     </div>
                   </div>
                 </div>

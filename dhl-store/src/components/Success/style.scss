@@ -1,0 +1,62 @@
+$azul: #303952;
+$branco: #fff;
+$cinza: #e6e6e6;
+$cinza2: #7e7c7c;
+$vermelho: #c70011;
+$vermelho2: #ff4959;
+$vermelho3: #842029;
+
+body {
+    background-color: #e8fde3;
+}
+
+.content-success {
+    .heading {
+        font-size: 20px;
+        font-weight: 600;
+        color: #3D5AFE;
+    }
+
+    .line1 {
+        color: #000;
+        font-size: 12px;
+    }
+
+    .line2 {
+        color: #000;
+        font-size: 12px;
+    }
+
+    .line3 {
+        color: #000;
+        font-size: 12px;
+    }
+
+    .cards {
+        transition: all 0.2s ease;
+        cursor: pointer;
+    }
+
+    .cards:hover {
+        box-shadow: 5px 6px 6px 2px #e9ecef;
+        transform: scale(1.1);
+    }
+
+    .alert {
+        background-color: #c8f7c5;
+        border: none;
+        filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.15));
+    }
+
+    .icone-success {
+        position: absolute;
+        right: 0;
+        top: 0;
+        margin-right: -35px;
+        margin-top: -0.35em;
+        z-index: 1000000000000000100 !important;
+        border-radius: 50%;
+        color: #4daf7c;
+        background-color: #fff;
+    }
+}

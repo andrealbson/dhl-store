@@ -42,10 +42,10 @@ export default class Header extends Component {
                     </a>
                   </strong>
                 </div>
-                <div className="col-md-4 text-center font-size-14 font-book">
+                <div className="col-md-4 text-center font-size-14 font-book second-item">
                   algum texto aqui
                 </div>
-                <div className="col-md-4 text-center">
+                <div className="col-md-4 text-center rastreamento">
                   <i className="bi bi-pin-map-fill"></i>
                   &nbsp;{" "}
                   <span className="font-size-14 font-book">

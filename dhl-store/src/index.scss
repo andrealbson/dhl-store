@@ -917,3 +917,70 @@ select.select:hover+svg {
   pointer-events: none;
   user-select: none;
 }
+
+
+@media only screen and (min-width: 0px) and (max-width: 768px) {
+
+  .rastreamento,
+  .second-item,
+  .content-menu,
+  .content-carousel-home,
+  .carousel-item {
+    display: none;
+    visibility: hidden;
+  }
+
+  .content-search-info .content-cart-favorites,
+  .react-reveal.products {
+    justify-content: center !important;
+  }
+
+  .grid-container {
+    margin-top: 15em;
+
+    .filter {
+      flex-direction: column;
+      height: 250px;
+
+      .filter-result,
+      .filter-sort {
+        margin-bottom: -2em;
+      }
+
+      .filter-sort {
+        margin-top: -1em;
+      }
+
+    }
+
+  }
+
+  .ReactModalPortal .react-reveal.product-details {
+    img {
+      max-height: 40vh !important;
+      max-width: 17rem !important;
+    }
+  }
+
+  .content-checkout .breadcrumb__step, .content-success .breadcrumb__step{
+    font-size: 9px !important;
+  }
+
+  .content-checkout {
+    padding-top: 12.5em !important;
+  }
+
+  .content-success {
+    padding-top: 5.25em !important;
+
+    .container.mt-4.d-flex.justify-content-center {
+      margin-top: -2em !important;
+    }
+
+    .content-success .icone-success {
+      display: none;
+      visibility: hidden;
+    }
+  }
+
+}

@@ -3,9 +3,19 @@ import { Link } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import "../Checkout/style.scss";
+import formatCurrency from "../../util";
 
 export default class Checkout extends Component {
+
+  constructor() {
+    super();
+    this.state = {
+      cartItems: JSON.parse(localStorage.getItem("cartItems")),
+    };
+  }
+
   render() {
+    const { cartItems } = this.props;
     setInterval(function () {
       document.getElementById("count-cart").innerHTML =
         "" +
@@ -40,7 +50,15 @@ export default class Checkout extends Component {
                 </h5>
                 <span className="pl-2">Pay</span>
               </div>
-              <h4 className="green">$85.00</h4>
+              <h4 className="green">
+              {formatCurrency(
+                      cartItems.reduce(
+                        (acc, item) => acc + item.attributes.price * item.count,
+                        0
+                      )
+                    )}
+              </h4>
+              <hr />
               <h4 className="text-dark">Instruções de Frete & Pagamento</h4>
               <div className="d-flex pt-2">
                 <div>
@@ -48,6 +66,7 @@ export default class Checkout extends Component {
                     <b>Frete padrão:</b>
                     <br />
                     <span className="green">R$ 71,60</span>
+                    <span>Total: {this.state.cartItems.length}</span>
                   </p>
                 </div>
               </div>
@@ -140,36 +159,37 @@ export default class Checkout extends Component {
                   <div className="col-8">Contracted Price</div>
                   <div className="ml-auto">$186.76</div>
                 </div>
-                <div className="p-2 d-flex">
-                  <div className="col-8">Amount toward deductible</div>
-                  <div className="ml-auto">$0.00</div>
-                </div>
-                <div className="p-2 d-flex">
-                  <div className="col-8">Coinsurance( 0% )</div>
-                  <div className="ml-auto">+ $0.00</div>
-                </div>
-                <div className="p-2 d-flex">
-                  <div className="col-8">Copayment</div>
-                  <div className="ml-auto">+ $40.00</div>
-                </div>
-                <div className="border-top px-4 mx-3"></div>
-                <div className="p-2 d-flex pt-3">
-                  <div className="col-8">
-                    Total Deductible, Coinsurance, and Copay
-                  </div>
-                  <div className="ml-auto">$40.00</div>
-                </div>
-                <div className="p-2 d-flex">
-                  <div className="col-8">
-                    Maximum out-of-pocket on Insurance Policy (not reached)
-                  </div>
-                  <div className="ml-auto">$6500.00</div>
-                </div>
+                <ul className="cart-items">
+                {cartItems.map((item) => (
+                  <li key={item.id}>
+                    <div className="img-cart-items-list">
+                      <img
+                        src={item.attributes.link_image}
+                        alt={item.attributes.title}
+                      ></img>
+                    </div>
+                    <div>
+                      <div className="cart-items-list-title">
+                        {item.attributes.title}
+                      </div>
+                      <div className="right">
+                        {formatCurrency(item.attributes.price)}&nbsp; <span className="badge bg-danger">x{item.count}</span>
+                      </div>
+                    </div>
+                  </li>
+                ))}
+              </ul>
+                
                 <div className="border-top px-4 mx-3"></div>
                 <div className="p-2 d-flex pt-3">
                   <div className="col-8">Valor Total de Produtos:</div>
                   <div className="ml-auto">
-                    <b>R$ 400,25</b>
+                    <b>{formatCurrency(
+                      cartItems.reduce(
+                        (acc, item) => acc + item.attributes.price * item.count,
+                        0
+                      )
+                    )}</b>
                   </div>
                 </div>
                 <div className="p-2 d-flex">
@@ -178,7 +198,7 @@ export default class Checkout extends Component {
                     <span className="fa fa-question-circle text-secondary"></span>
                   </div>
                   <div className="ml-auto">
-                    <b>$71.76</b>
+                    <b>R$ 71.60</b>
                   </div>
                 </div>
                 <div className="border-top px-4 mx-3"></div>
@@ -187,7 +207,14 @@ export default class Checkout extends Component {
                     <b>TOTAL:</b>
                   </div>
                   <div className="ml-auto">
-                    <b className="green">R$ 134,26</b>
+                    <b className="green">
+                    {formatCurrency(
+                      cartItems.reduce(
+                        (acc, item) => acc + item.attributes.price * item.count,
+                        0
+                      ) + 71.60
+                    )}
+                    </b>
                   </div>
                 </div>
               </div>

@@ -27,7 +27,10 @@ class Checkout extends Component {
       <>
         <Header />
         <div className="content-checkout" style={mystyle}>
-          <CheckOut />
+          <CheckOut
+            cartItems={this.state.cartItems}
+            removeFromCart={this.removeFromCart}
+          />
         </div>
       </>
     );

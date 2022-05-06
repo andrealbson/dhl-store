@@ -1,0 +1,49 @@
+$azul: #303952;
+$branco: #fff;
+$cinza: #e6e6e6;
+$cinza2: #7e7c7c;
+$vermelho: #c70011;
+$vermelho2: #ff4959;
+$vermelho3: #842029;
+
+.content-checkout {
+    & {
+        background-color: #f0f0f0;
+        padding-top: 2em;
+    }
+    
+    .green{
+        color: rgb(15, 207, 143);
+        font-weight: 680;
+    }
+
+    .content-order-checkout {
+        border: 1px solid #e6e6e6;
+        border-radius: 7px !important;
+        padding: 1em 2em;
+    }
+
+    .btn-cancelar-top-checkout {
+        margin-top: -1.8em;
+        border-top-left-radius: 0 !important;
+        border-top-right-radius: 0 !important;
+        border-bottom-right-radius: 15px !important;
+        border-bottom-left-radius: 15px !important;
+        padding-top: 1em;
+        padding-bottom: 1em;
+        box-shadow: 0 6px 6px -4px black;
+        transition: all 0.3s ease-in-out;
+        font-family: 'Nunito', sans-serif !important;
+
+        &:hover {
+            transition: all 0.3s ease-in-out;
+            box-shadow: 0 11px 18px -5px black;
+        }
+    }
+    
+    @media(max-width:567px){
+        .mobile{
+            padding-top: 40px;
+        }
+    }
+}

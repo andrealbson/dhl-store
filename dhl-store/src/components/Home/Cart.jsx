@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import formatCurrency from "../../util";
 import { Fade } from "react-reveal";
+import { Link } from 'react-router-dom';
 
 export default class Cart extends Component {
   render() {
@@ -69,7 +70,9 @@ export default class Cart extends Component {
                 </div>
               </div>
               <div>
-                <button className="button primary btn-pay-now">Pagar Agora</button>
+                <Link to="/checkout">
+                  <button className="button primary btn-pay-now">Pagar Agora</button>
+                </Link>
               </div>
             </div>
           )}

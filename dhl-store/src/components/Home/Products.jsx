@@ -91,7 +91,6 @@ export default class Products extends Component {
                   <div className="footer-card">
                     <div>
                       <button
-                        onClick={() => this.props.addToCart(product)}
                         className=""
                       >
                         <i className="fa-solid fa-eye fa-lg"></i>
@@ -99,7 +98,6 @@ export default class Products extends Component {
                     </div>
                     <div>
                       <button
-                        onClick={() => this.props.addToCart(product)}
                         className=""
                       >
                         <i className="fa-solid fa-heart fa-lg"></i>

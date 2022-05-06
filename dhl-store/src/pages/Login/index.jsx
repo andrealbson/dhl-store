@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import "../../pages/Login/login.scss";
 import "../../pages/Login/styled.js";
 import { useState } from "react";
@@ -36,21 +36,21 @@ const Page = () => {
                   Ou Faça login com plataformas sociais
                 </p>
                 <div className="social-media">
-                  <a href="#" className="social-icon">
+                  <a href="/#" className="social-icon">
                     <i className="fab fa-facebook-f"></i>
                   </a>
-                  <a href="#" className="social-icon">
+                  <a href="/#" className="social-icon">
                     <i className="fab fa-twitter"></i>
                   </a>
-                  <a href="#" className="social-icon">
+                  <a href="/#" className="social-icon">
                     <i className="fab fa-google"></i>
                   </a>
-                  <a href="#" className="social-icon">
+                  <a href="/#" className="social-icon">
                     <i className="fab fa-linkedin-in"></i>
                   </a>
                 </div>
               </form>
-              <form action="#" className="sign-up-form">
+              <form action="/#" className="sign-up-form">
                 <h2 className="title">Criar minha Conta</h2>
                 <div className="input-field">
                   <i className="fas fa-user"></i>
@@ -69,16 +69,16 @@ const Page = () => {
                   <small>Ou use suas redes sociais para criar sua conta</small>
                 </p>
                 <div className="social-media">
-                  <a href="#" className="social-icon">
+                  <a href="/#" className="social-icon">
                     <i className="fab fa-facebook-f"></i>
                   </a>
-                  <a href="#" className="social-icon">
+                  <a href="/#" className="social-icon">
                     <i className="fab fa-twitter"></i>
                   </a>
-                  <a href="#" className="social-icon">
+                  <a href="/#" className="social-icon">
                     <i className="fab fa-google"></i>
                   </a>
-                  <a href="#" className="social-icon">
+                  <a href="/#" className="social-icon">
                     <i className="fab fa-linkedin-in"></i>
                   </a>
                 </div>
@@ -101,11 +101,11 @@ const Page = () => {
                   <small>
                     Ao criar sua conta, você estará concordando com os nossos{" "}
                     <br />
-                    <a href="#" className="text-white">
+                    <a href="/#" className="text-white">
                       Termos de uso
                     </a>
                     &nbsp; e &nbsp;
-                    <a href="#" className="text-white">
+                    <a href="/#" className="text-white">
                       Política de Privacidade
                     </a>
                     .

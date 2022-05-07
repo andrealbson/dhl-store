@@ -21,6 +21,17 @@ input {
     overflow: hidden !important;
   }
 
+  .flex-btn-cad {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+
+    div:first-child {
+      margin-right: 10px !important;
+    }
+  }
+
   .forms-container {
     position: absolute;
     width: 100%;
@@ -312,6 +323,10 @@ input {
   }
 
   @media (max-width: 870px) {
+    .content-btn-back-to-store {
+      margin-top: -15em;
+      margin-left: 1em;
+    }
     .container {
       min-height: 800px;
       height: 100vh;

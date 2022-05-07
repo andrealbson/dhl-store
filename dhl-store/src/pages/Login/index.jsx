@@ -1,5 +1,5 @@
 import React from "react";
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "../../pages/Login/login.scss";
 import "../../pages/Login/styled.js";
 import { useState } from "react";
@@ -89,14 +89,20 @@ const Page = () => {
           <div className="panels-container">
             <div className="panel left-panel">
               <div className="content">
-                <h3>Novo por aqui?</h3>
-                <button
-                  className="btn transparent mt-3 mb-2"
-                  onClick={toggleClass}
-                  id="sign-up-btn"
-                >
-                  Cadastre-se
-                </button>
+                <div className="flex-btn-cad">
+                  <div>
+                    <h3>Novo por aqui?</h3>
+                  </div>
+                  <div>
+                    <button
+                      className="btn transparent mt-3 mb-2"
+                      onClick={toggleClass}
+                      id="sign-up-btn"
+                    >
+                      Cadastre-se
+                    </button>
+                  </div>
+                </div>
                 <p>
                   <small>
                     Ao criar sua conta, você estará concordando com os nossos{" "}
@@ -110,8 +116,21 @@ const Page = () => {
                     </a>
                     .
                   </small>
+                  <div className="content-btn-back-to-store">
+                    <hr />
+                    <h6>
+                      <Link
+                        to="/home"
+                        className="btn transparent"
+                        style={{ background: "#fff", color: "#ff4959" }}
+                      >
+                        Voltar a Loja
+                      </Link>
+                    </h6>
+                  </div>
                 </p>
               </div>
+
               <img src={imgLogin} className="image" alt="" />
             </div>
             <div className="panel right-panel">

@@ -223,12 +223,29 @@ $vermelho3: #842029;
             box-shadow: 0 8px 9px -5px black;
 
             &.cart {
-                right: 60px;
+                right: -50px;
                 top: -7px !important;
                 margin: inherit;
+                margin-right: 4.5em !important;
                 padding: inherit;
                 display: block;
             }
+        }
+
+        .total-cart-navbar {
+            
+        }
+
+        .cart-title-navbar {
+            position: absolute;
+            width: 100%;
+            top: 4px;
+        }
+
+        .total-cart-navbar {
+            position: absolute;
+            width: 80px;
+            margin-top: -3px;
         }
     }
 }

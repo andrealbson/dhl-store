@@ -97,7 +97,7 @@ class Home extends Component {
   render() {
     return (
       <>
-        <Header />
+        <Header cartItems={this.state.cartItems} />
         <SlideCarousel />
         <div className="grid-container">
           <main>

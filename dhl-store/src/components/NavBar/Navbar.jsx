@@ -4,24 +4,13 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import Logo from "../../images/logo.png";
 import "../NavBar/style.scss";
+import formatCurrency from "../../util";
 
-import {
-  Nav,
-  Form,
-  InputGroup,
-  FormControl,
-  Button,
-} from "react-bootstrap";
+import { Nav, Form, InputGroup, FormControl, Button } from "react-bootstrap";
 
 export default class Header extends Component {
   render() {
-    setInterval(function () {
-      document.getElementById("count-cart").innerHTML =
-        "" +
-        Object.values(JSON.parse(localStorage.getItem("cartItems"))).flat()
-          .length +
-        "";
-    }, 500);
+    const { cartItems } = this.props;
 
     return (
       <>
@@ -105,17 +94,23 @@ export default class Header extends Component {
                           <div className="flex-content-cart">
                             <div>
                               <i className="bi bi-cart3 icon-toggle"></i>
-                              <span
-                                className="badge-count cart"
-                                id="count-cart"
-                              >
-                                0
+                              <span className="badge-count cart">
+                                {cartItems.length}
                               </span>
                             </div>
                             <div>
                               <div className="flex-column-cart">
-                                <div>Carrinho</div>
-                                <div>740,00</div>
+                                <div className="cart-title-navbar">Carrinho</div>
+                                <div className="total-cart-navbar">
+                                  {formatCurrency(
+                                    cartItems.reduce(
+                                      (acc, item) =>
+                                        acc +
+                                        item.attributes.price * item.count,
+                                      0
+                                    )
+                                  ).substring(3)}
+                                </div>
                               </div>
                             </div>
                           </div>
@@ -130,10 +125,7 @@ export default class Header extends Component {
           <nav>
             <div className="container-fluid content-menu">
               <Nav defaultActiveKey="/home" as="ul">
-                
-              <Nav.Item as="li">
-                  
-                </Nav.Item>
+                <Nav.Item as="li"></Nav.Item>
                 <Nav.Item as="li">
                   <Nav.Link
                     eventKey="link-1"

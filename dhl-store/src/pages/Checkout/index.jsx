@@ -25,7 +25,7 @@ class Checkout extends Component {
     };
     return (
       <>
-        <Header />
+        <Header cartItems={this.state.cartItems}/>
         <div className="content-checkout" style={mystyle}>
           <CheckOut
             cartItems={this.state.cartItems}

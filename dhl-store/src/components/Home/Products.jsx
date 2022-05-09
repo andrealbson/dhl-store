@@ -35,7 +35,7 @@ export default class Products extends Component {
                 </div>
                 <div className="product">
                   <a
-                    href={"#" + product.id}
+                    href={"/#" + product.id}
                     onClick={() => this.openModal(product)}
                   >
                     <div className="content-image-product">

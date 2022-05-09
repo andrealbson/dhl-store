@@ -16,14 +16,7 @@ export default class Checkout extends Component {
 
   render() {
     const { cartItems } = this.props;
-    setInterval(function () {
-      document.getElementById("count-cart").innerHTML =
-        "" +
-        Object.values(JSON.parse(localStorage.getItem("cartItems"))).flat()
-          .length +
-        "";
-    }, 500);
-
+    
     return (
       <>
         <div className="breadcrumb" style={{marginTop: "-59px"}}>
@@ -66,7 +59,6 @@ export default class Checkout extends Component {
                     <b>Frete padrão:</b>
                     <br /> 
                     <span className="green">R$ 71,60</span>
-                    <span>Total: {this.state.cartItems.length}</span>
                   </p>
                 </div>
               </div>

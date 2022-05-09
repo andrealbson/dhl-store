@@ -25,7 +25,7 @@ class Success extends Component {
     };
     return (
       <>
-        <Header />
+        <Header cartItems={this.state.cartItems} />
         <div className="content-success" style={mystyle}>
           <CheckOutSuccess />
         </div>

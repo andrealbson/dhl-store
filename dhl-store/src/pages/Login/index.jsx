@@ -106,17 +106,57 @@ const Page = () => {
                   <h2 className="title">Criar minha Conta</h2>
                   <div className="input-field">
                     <i className="fas fa-user"></i>
-                    <input type="text" placeholder="Seu nome completo" />
+                    <Field
+                      name="nome"
+                      type="text"
+                      placeholder="Seu nome completo"
+                      onBlur={() => (errors.nome ? errorMsg(errors.nome) : "")}
+                    />
+                    {errors.nome ? (
+                      <div className="error-message">{t(errors.nome)}</div>
+                    ) : (
+                      ""
+                    )}
                   </div>
                   <div className="input-field">
                     <i className="fas fa-envelope"></i>
-                    <input type="email" placeholder="E-mail" />
+                    <Field
+                      name="email"
+                      type="email"
+                      placeholder="E-mail"
+                      onBlur={() =>
+                        errors.email ? errorMsg(errors.email) : ""
+                      }
+                    />
+                    {errors.email ? (
+                      <div className="error-message">{t(errors.email)}</div>
+                    ) : (
+                      ""
+                    )}
                   </div>
                   <div className="input-field">
                     <i className="fas fa-lock"></i>
-                    <input type="password" placeholder="Senha" />
+                    <Field
+                      name="senha"
+                      type="password"
+                      placeholder="Senha"
+                      onBlur={() =>
+                        errors.senha ? errorMsg(errors.email) : ""
+                      }
+                      senha
+                    />
+                    {errors.senha ? (
+                      <div className="error-message">{t(errors.senha)}</div>
+                    ) : (
+                      ""
+                    )}
                   </div>
-                  <input type="submit" className="btn" value="Criar conta" />
+                  <input
+                    type="submit"
+                    className="btn"
+                    value="Criar conta"
+                    disabled={!isValid}
+                  />
                   <p className="social-text text-muted">
                     <small>
                       Ou use suas redes sociais para criar sua conta

@@ -83,13 +83,30 @@ input {
     max-width: 380px;
     width: 100%;
     background-color: #f0f0f0;
-    margin: 10px 0;
+    margin: 20px 0;
     height: 55px;
     border-radius: 55px;
     display: grid;
     grid-template-columns: 15% 85%;
     padding: 0 0.4rem;
     position: relative;
+
+    .error-message {
+      position: absolute;
+      color:#ff4959;
+      font-size: 0.7rem;
+      bottom: 0;
+      margin-bottom: -2.1em;
+      padding: 0.25em 1.5em;
+      font-weight: 900;
+      width: 100%;
+      text-align: center;
+
+      &::before {
+        font-family: "Font Awesome 5 Free"; font-weight: 900; content: "\f06a";
+        padding-right: 0.25em;
+      }
+    }
   }
 
   .input-field i {

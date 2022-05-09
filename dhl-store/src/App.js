@@ -4,6 +4,7 @@ import Login from "./pages/Login/index.jsx";
 import Home from "./pages/Home/index.jsx";
 import Checkout from "./pages/Checkout/index.jsx";
 import Success from "./pages/Success/index";
+import EmptyCart from "./pages/EmptyCart/index.jsx";
 
 class App extends React.Component {
   render() {
@@ -15,6 +16,7 @@ class App extends React.Component {
           <Route path="/login" element={<Login />}></Route>
           <Route path="/checkout" element={<Checkout />}></Route>
           <Route path="/checkoutSuccess" element={<Success />}></Route>
+          <Route path="/emptycart" element={<EmptyCart />}></Route>
         </Routes>
       </Router>
     );

@@ -10,6 +10,7 @@ import { Nav, Form, InputGroup, FormControl, Button } from "react-bootstrap";
 
 export default class Header extends Component {
   render() {
+    
     const { cartItems } = this.props;
 
     return (
@@ -89,8 +90,8 @@ export default class Header extends Component {
                       </Link>
                     </div>
                     <div className="content-icons">
-                      <Link to="/checkout">
-                        <a href="/#">
+                      <Link to={this.props.cartItems.length > 0 ? "/checkout" : "/emptyCart"}>
+                        <a href="/">
                           <div className="flex-content-cart">
                             <div>
                               <i className="bi bi-cart3 icon-toggle"></i>
@@ -100,7 +101,9 @@ export default class Header extends Component {
                             </div>
                             <div>
                               <div className="flex-column-cart">
-                                <div className="cart-title-navbar">Carrinho</div>
+                                <div className="cart-title-navbar">
+                                  Carrinho
+                                </div>
                                 <div className="total-cart-navbar">
                                   {formatCurrency(
                                     cartItems.reduce(

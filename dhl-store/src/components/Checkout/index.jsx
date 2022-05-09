@@ -39,7 +39,7 @@ export default class Checkout extends Component {
               <div className="py-4 d-flex flex-row">
                 <h5>
                   <span className="fa fa-check-square-o"></span>
-                  <b>DHL ECOMMERCE</b> |{" "}
+                  <b>AndreStore</b> |{" "}
                 </h5>
                 <span className="pl-2">Pay</span>
               </div>

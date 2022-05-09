@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
-import Logo from "../../images/logo.png";
+import Logo from "../../images/logo-andre-oficial.png";
 import "../NavBar/style.scss";
 import formatCurrency from "../../util";
 

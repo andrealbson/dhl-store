@@ -146,12 +146,7 @@ export default class Checkout extends Component {
                 <div className="p-2 ml-3">
                   <h4 className="text-center">Resumo do pedido</h4>
                 </div>
-                <hr style={{ marginTop: "-0em", backgroundColor: "#a0a0a0" }} />
-                <div className="p-2 d-flex">
-                  <div className="col-8">Contracted Price</div>
-                  <div className="ml-auto">$186.76</div>
-                </div>
-                <ul className="cart-items">
+                <ul className="cart-items" style={{marginTop: '-1em'}}>
                 {cartItems.map((item) => (
                   <li key={item.id}>
                     <div className="img-cart-items-list">

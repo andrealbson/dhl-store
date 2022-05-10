@@ -1,70 +1,66 @@
-# Getting Started with Create React App
+# AndreStore
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## ESCOPO E OBJETIVO
+Este projeto foi desenvolvido para concorrer a vaga de *Front-End* com base em uma  [fake API](https://sheltered-meadow-49957.herokuapp.com/documentation/v1.0.0), contendo partes básicas de um e-commerce, que é o produto principal da empresa.
 
-## Available Scripts
+> _**Objetivo**: ilustrar uma aplicação contendo partes básicas de um e-commerce, seguindo os 
+> requisitos da documentação do teste Precode_.
 
-In the project directory, you can run:
 
-### `npm start`
+## 🚀 Começando
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Essas instruções permitirão que você obtenha uma cópia do projeto em operação na sua máquina local para fins de desenvolvimento e teste da aplicação.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- `git clone https://github.com/andrealbson/dhl-store.git`
+- `cd dhl-store`
 
-### `npm test`
+### 📋 Pré-requisitos
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Para executar o projeto localmente, você precisa ter um browser atualizado, de preferência o _Google Chrome_ ou _Mozilla Firefox_
 
-### `npm run build`
+### 🔧 Instalação
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Abra um terminal e siga os comandos a seguir:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```
+#para instalar todas as dependecias do projeto
+$ npm install
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+#para iniciar a execução local do projeto
+$ npm start
+```
 
-### `npm run eject`
+Após o comando _npm start_ é esperado que o terminal disponiblize o endereço disponível para visualizar o projeto no browser.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Se você digitar estes comandos acima _dentro do **Virtual Studio Code**_, o browser abrirá automaticamente o projeto.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+<hr/>
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## 🛠️ Construído com
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Ferramentas que usei para este projeto:
 
-## Learn More
+* [ReactJS](https://reactjs.org/) - Biblioteca JavaScript para construir interfaces de usuário
+* [Bootstrap 5](https://getbootstrap.com/) - Framework mais popular para criar sites responsivos e voltados para dispositivos móveis.
+* [React Bootstrap](https://react-bootstrap.github.io/) - O framework front-end mais popular.
+* [Bootstrap Icons](https://icons.getbootstrap.com/) - Biblioteca de ícones de código aberto gratuita e de alta qualidade.
+* [FontAwesome](https://icons.getbootstrap.com/) - Biblioteca de ícones.
+* [Formik](https://formik.org/) - Biblioteca robusta que auxilia nas construções e validações de formulários em React.
+* [i18next](https://react.i18next.com/) - Poderoso framework de internacionalização para React.
+* [Yup](https://github.com/jquense/yup) - Construtor de esquema para análise e validação de valores.
+* [SweetAlert 2](https://sweetalert2.github.io/) - Usado para exibições de alerts do tipo popup.
+* [Sass](https://sass-lang.com/) - Extensão CSS mais madura, estável e poderosa do mundo.
+* [Axios](https://axios-http.com/ptbr/docs/intro) - Cliente HTTP baseado em promessas para o navegador e Node.js. Usado neste projeto para consumo de API.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+<hr/>
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Telas & Rotas
+[Home](http://localhost:3000/home) - Cliente HTTP baseado em 
 
-### Code Splitting
+## ✒️ Autor
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+**André Albson** - *Desenvolvedor do projeto* - [umdesenvolvedor](https://github.com/andrealbson)
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+---
+⌨️ com ❤️ por [André Albson](https://github.com/andrealbson) 😊

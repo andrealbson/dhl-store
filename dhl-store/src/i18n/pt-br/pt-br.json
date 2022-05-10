@@ -1,5 +1,6 @@
 {
     "translation": {
-        "email must be a valid email" : "E-mail inválido! Por favor, verifique."
+        "email must be a valid email" : "E-mail inválido! Por favor, verifique.",
+        "nome must be at least 6 characters" : "Este campo deve ter pelo menos 6 caracteres"
     }
 }

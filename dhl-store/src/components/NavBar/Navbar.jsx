@@ -5,14 +5,19 @@ import "bootstrap-icons/font/bootstrap-icons.css";
 import Logo from "../../images/logo-andre-oficial.png";
 import "../NavBar/style.scss";
 import formatCurrency from "../../util";
-
 import { Nav, Form, InputGroup, FormControl, Button } from "react-bootstrap";
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { fas } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import "../../babel.config.js";
+import "../../babel-plugin-macros.config.js";
+
+library.add(fas);
 
 export default class Header extends Component {
   render() {
-    
     const { cartItems } = this.props;
-    window.scrollTo(0, 0)
+    window.scrollTo(0, 0);
 
     return (
       <>
@@ -91,7 +96,13 @@ export default class Header extends Component {
                       </Link>
                     </div>
                     <div className="content-icons">
-                      <Link to={this.props.cartItems.length > 0 ? "/checkout" : "/emptyCart"}>
+                      <Link
+                        to={
+                          this.props.cartItems.length > 0
+                            ? "/checkout"
+                            : "/emptyCart"
+                        }
+                      >
                         <a href="/">
                           <div className="flex-content-cart">
                             <div>
@@ -135,7 +146,10 @@ export default class Header extends Component {
                     eventKey="link-1"
                     className="font-size-16 font-book"
                   >
-                    <i className="fa-solid fa-baby-carriage fa-lg"></i>
+                    <FontAwesomeIcon
+                      icon="fa-solid fa-baby-carriage"
+                      size="lg"
+                    />
                     Infantil
                   </Nav.Link>
                 </Nav.Item>
@@ -144,7 +158,10 @@ export default class Header extends Component {
                     eventKey="link-1"
                     className="font-size-16 font-book"
                   >
-                    <i className="fa-solid fa-spray-can-sparkles fa-lg"></i>
+                    <FontAwesomeIcon
+                      icon="fa-solid fa-spray-can-sparkles"
+                      size="lg"
+                    />
                     Beleza e Saúde
                   </Nav.Link>
                 </Nav.Item>
@@ -153,7 +170,7 @@ export default class Header extends Component {
                     eventKey="link-1"
                     className="font-size-16 font-book"
                   >
-                    <i className="fa-solid fa-kitchen-set fa-lg"></i>
+                    <FontAwesomeIcon icon="fa-solid fa-kitchen-set" size="lg" />
                     Eletroportáteis
                   </Nav.Link>
                 </Nav.Item>
@@ -162,7 +179,7 @@ export default class Header extends Component {
                     eventKey="link-2"
                     className="font-size-16 font-book"
                   >
-                    <i className="fa-solid fa-fire-burner fa-lg"></i>
+                    <FontAwesomeIcon icon="fa-solid fa-fire-burner" size="lg" />
                     Eletrodomésticos
                   </Nav.Link>
                 </Nav.Item>
@@ -171,7 +188,7 @@ export default class Header extends Component {
                     eventKey="link-3"
                     className="font-size-16 font-book"
                   >
-                    <i className="fa-solid fa-gamepad fa-lg"></i>
+                    <FontAwesomeIcon icon="fa-solid fa-gamepad" size="lg" />
                     Eletrônicos
                   </Nav.Link>
                 </Nav.Item>
@@ -180,7 +197,10 @@ export default class Header extends Component {
                     eventKey="link-5"
                     className="font-size-16 font-book"
                   >
-                    <i className="fa-solid fa-baseball-bat-ball fa-lg"></i>
+                    <FontAwesomeIcon
+                      icon="fa-solid fa-baseball-bat-ball"
+                      size="lg"
+                    />
                     Esporte & Lazer
                   </Nav.Link>
                 </Nav.Item>
@@ -189,7 +209,7 @@ export default class Header extends Component {
                     eventKey="link-6"
                     className="font-size-16 font-book"
                   >
-                    <i className="fa-solid fa-computer fa-lg"></i>
+                    <FontAwesomeIcon icon="fa-solid fa-computer" size="lg" />
                     Informática
                   </Nav.Link>
                 </Nav.Item>
@@ -198,7 +218,7 @@ export default class Header extends Component {
                     eventKey="link-7"
                     className="font-size-16 font-book"
                   >
-                    <i className="fa-solid fa-couch fa-lg"></i>
+                    <FontAwesomeIcon icon="fa-solid fa-couch" size="lg" />
                     Móveis
                   </Nav.Link>
                 </Nav.Item>
@@ -207,7 +227,10 @@ export default class Header extends Component {
                     eventKey="link-8"
                     className="font-size-16 font-book"
                   >
-                    <i className="fa-solid fa-mobile-screen-button fa-lg"></i>
+                    <FontAwesomeIcon
+                      icon="fa-solid fa-mobile-screen-button"
+                      size="lg"
+                    />
                     Telefonia
                   </Nav.Link>
                 </Nav.Item>

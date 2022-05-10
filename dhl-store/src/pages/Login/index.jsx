@@ -11,6 +11,18 @@ import swal from "sweetalert";
 import { useTranslation } from "react-i18next";
 import "../../i18n";
 import { t } from "i18next";
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { fas } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faFacebookF,
+  faGoogle,
+  faLinkedinIn,
+  faTwitter,
+} from "@fortawesome/free-brands-svg-icons";
+import iconError from "../../images/circle-exclamation-solid.svg";
+
+library.add(fas);
 
 const errorMsg = (msg) => {
   swal("Erro", t(msg), "error");
@@ -47,7 +59,7 @@ const Page = () => {
                 <Form className="sign-in-form">
                   <h2 className="title">Entrar</h2>
                   <div className="input-field">
-                    <i className="fas fa-user"></i>
+                    <FontAwesomeIcon icon="fa-solid fa-user" />
                     <Field
                       name="email"
                       type="text"
@@ -57,13 +69,16 @@ const Page = () => {
                       }
                     />
                     {errors.email ? (
-                      <div className="error-message">{t(errors.email)}</div>
+                      <div className="error-message">
+                        <img src={iconError} className="icon-error" alt="" />
+                        {t(errors.email)}
+                      </div>
                     ) : (
                       ""
                     )}
                   </div>
                   <div className="input-field">
-                    <i className="fas fa-lock"></i>
+                    <FontAwesomeIcon icon="fa-solid fa-lock" />
                     <Field
                       name="senha"
                       type="password"
@@ -73,7 +88,10 @@ const Page = () => {
                       }
                     />
                     {errors.senha ? (
-                      <div className="error-message">{t(errors.senha)}</div>
+                      <div className="error-message">
+                        <img src={iconError} className="icon-error" alt="" />
+                        {t(errors.senha)}
+                      </div>
                     ) : (
                       ""
                     )}
@@ -89,23 +107,23 @@ const Page = () => {
                   </p>
                   <div className="social-media">
                     <a href="/#" className="social-icon">
-                      <i className="fab fa-facebook-f"></i>
+                      <FontAwesomeIcon icon={faFacebookF} />
                     </a>
                     <a href="/#" className="social-icon">
-                      <i className="fab fa-twitter"></i>
+                      <FontAwesomeIcon icon={faTwitter} />
                     </a>
                     <a href="/#" className="social-icon">
-                      <i className="fab fa-google"></i>
+                      <FontAwesomeIcon icon={faGoogle} />
                     </a>
                     <a href="/#" className="social-icon">
-                      <i className="fab fa-linkedin-in"></i>
+                      <FontAwesomeIcon icon={faLinkedinIn} />
                     </a>
                   </div>
                 </Form>
                 <Form className="sign-up-form">
                   <h2 className="title">Criar minha Conta</h2>
                   <div className="input-field">
-                    <i className="fas fa-user"></i>
+                    <FontAwesomeIcon icon="fa-solid fa-user" />
                     <Field
                       name="nome"
                       type="text"
@@ -113,13 +131,16 @@ const Page = () => {
                       onBlur={() => (errors.nome ? errorMsg(errors.nome) : "")}
                     />
                     {errors.nome ? (
-                      <div className="error-message">{t(errors.nome)}</div>
+                      <div className="error-message">
+                        <img src={iconError} className="icon-error" alt="" />
+                        {t(errors.nome)}
+                      </div>
                     ) : (
                       ""
                     )}
                   </div>
                   <div className="input-field">
-                    <i className="fas fa-envelope"></i>
+                    <FontAwesomeIcon icon="fa-solid fa-envelope" />
                     <Field
                       name="email"
                       type="email"
@@ -129,13 +150,16 @@ const Page = () => {
                       }
                     />
                     {errors.email ? (
-                      <div className="error-message">{t(errors.email)}</div>
+                      <div className="error-message">
+                        <img src={iconError} className="icon-error" alt="" />
+                        {t(errors.email)}
+                      </div>
                     ) : (
                       ""
                     )}
                   </div>
                   <div className="input-field">
-                    <i className="fas fa-lock"></i>
+                    <FontAwesomeIcon icon="fa-solid fa-lock" />
                     <Field
                       name="senha"
                       type="password"
@@ -146,7 +170,10 @@ const Page = () => {
                       senha
                     />
                     {errors.senha ? (
-                      <div className="error-message">{t(errors.senha)}</div>
+                      <div className="error-message">
+                        <img src={iconError} className="icon-error" alt="" />
+                        {t(errors.senha)}
+                      </div>
                     ) : (
                       ""
                     )}
@@ -164,16 +191,16 @@ const Page = () => {
                   </p>
                   <div className="social-media">
                     <a href="/#" className="social-icon">
-                      <i className="fab fa-facebook-f"></i>
+                      <FontAwesomeIcon icon={faFacebookF} />
                     </a>
                     <a href="/#" className="social-icon">
-                      <i className="fab fa-twitter"></i>
+                      <FontAwesomeIcon icon={faTwitter} />
                     </a>
                     <a href="/#" className="social-icon">
-                      <i className="fab fa-google"></i>
+                      <FontAwesomeIcon icon={faGoogle} />
                     </a>
                     <a href="/#" className="social-icon">
-                      <i className="fab fa-linkedin-in"></i>
+                      <FontAwesomeIcon icon={faLinkedinIn} />
                     </a>
                   </div>
                 </Form>

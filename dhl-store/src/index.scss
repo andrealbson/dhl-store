@@ -945,9 +945,31 @@ select.select:hover+svg {
     visibility: hidden;
   }
 
+  .products li .content-rating-spins-product div:first-child {
+    font-size: 0.75rem !important;
+  }
+
+  .products li .content-oldprice-product div .old-price {
+    margin-top: -1.65em !important;
+  }
+
+  .content-description-product div:first-child {
+    white-space: nowrap;
+    width: calc(15vw + 65%) !important;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
   .content-search-info .content-cart-favorites,
   .react-reveal.products {
     justify-content: center !important;
+  }
+
+  .content-cart-favorites {
+    margin-top: -1em;
+    margin-left: -3.25em;
+    background: #ececec69;
+    border-bottom: 3px solid #C0C0C0;
   }
 
   .grid-container {
@@ -955,7 +977,11 @@ select.select:hover+svg {
 
     .filter {
       flex-direction: column;
-      height: 250px;
+      justify-content: center !important;
+      height: 210px !important;
+      margin: 0 !important;
+      margin-top: -2em !important;
+      text-align: center !important;
 
       .filter-result,
       .filter-sort {
@@ -1001,6 +1027,71 @@ select.select:hover+svg {
 
   .product-price {
     flex-direction: column;
+  }
+
+  .content-checkout {
+    .breadcrumb {
+      margin-top: -4.7em !important;
+    }
+
+    .container.rounded.bg-white {
+      margin-top: -2.25em;
+
+      .btn-cancelar-top-checkout {
+        border-radius: 0 !important;
+        width: 94vw !important;
+        display: block !important;
+        margin-top: -3.5em !important;
+      }
+
+    }
+  }
+
+  .content-success:first-child {
+    .breadcrumb {
+      margin-top: -6.75em !important;
+    }
+  }
+
+  .forms-container {
+    .signin-signup {
+      margin-top: 2em !important;
+
+      .sign-in-form {
+        .social-media {
+          margin-top: -1em !important;
+          margin-bottom: 1em;
+        }
+      }
+
+      .sign-up-form {
+        margin-top: -3.75em !important;
+
+        .title {
+          font-size: 1.25rem !important;
+          margin-bottom: -0.5em;
+        }
+
+        .social-media {
+          margin-top: -1em !important;
+        }
+      }
+    }
+  }
+
+  .login {
+    .panels-container {
+      .panel.right-panel {
+        .content {
+          margin-bottom: -1em !important;
+
+          h3 {
+            font-size: 1.05rem !important;
+            text-align: center !important;
+          }
+        }
+      }
+    }
   }
 
 }

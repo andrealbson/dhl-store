@@ -12,6 +12,7 @@ export default class Header extends Component {
   render() {
     
     const { cartItems } = this.props;
+    window.scrollTo(0, 0)
 
     return (
       <>

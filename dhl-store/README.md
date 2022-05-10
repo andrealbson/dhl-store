@@ -96,8 +96,8 @@ Ferramentas que usei para este projeto:
 <br />
 <hr/>
 
-## Checkout
-[checkoutSuccess](http://localhost:3000/checkout) - Tela de Sucesso / Agradecimento
+## Tela de Sucesso / Agradecimento
+[checkoutSuccess](http://localhost:3000/checkoutSuccess) - Tela de Sucesso / Agradecimento
 
 <img src="./public/images/success.gif">
 

@@ -54,12 +54,67 @@ Ferramentas que usei para este projeto:
 
 <hr/>
 
-## Telas & Rotas
-[Home](http://localhost:3000/home) - Cliente HTTP baseado em 
+# Telas & Rotas
+
+## Home
+[home](http://localhost:3000/home) - Página inicial
+
+<img src="./dhl-store/public/images/home.gif">
+
+<br/>
+<br/>
+
+## Modal de detalhe do produto
+
+
+
+<img src="./dhl-store/public/images/modal-detalhe-produto.gif">
+
+<br/>
+<br/>
+
+## Opções do carrinho
+
+<img src="./dhl-store/public/images/carrinho-home.gif">
+
+<br />
+<hr/>
+
+## Carrinho Vazio
+[emptyCart](http://localhost:3000/emptyCart) - Carrinho Vazio
+
+<img src="./dhl-store/public/images/carrinho-vazio.gif">
+
+<br />
+<hr/>
+
+## Checkout
+[checkout](http://localhost:3000/checkout) - Checkout
+
+<img src="./dhl-store/public/images/checkout.gif">
+
+<br />
+<hr/>
+
+## Tela de Sucesso / Agradecimento
+[checkoutSuccess](http://localhost:3000/checkout) - Tela de Sucesso / Agradecimento
+
+<img src="./dhl-store/public/images/success.gif">
+
+<br />
+<hr/>
+
+## Login e Cadastro
+[login](http://localhost:3000/login) - Tela de Login / Cadastro
+
+<img src="./dhl-store/public/images/login-cadastro.gif">
+
+<br />
+<hr/>
 
 ## ✒️ Autor
 
-**André Albson** - *Desenvolvedor do projeto* - [umdesenvolvedor](https://github.com/andrealbson)
+**André Albson** - [Desenvolvedor Front-End](https://github.com/andrealbson)
 
 
 ---

@@ -54,8 +54,63 @@ Ferramentas que usei para este projeto:
 
 <hr/>
 
-## Telas & Rotas
-[Home](http://localhost:3000/home) - Cliente HTTP baseado em 
+# Telas & Rotas
+
+## Home
+[home](http://localhost:3000/home) - Página inicial
+
+<img src="./public/images/home.gif">
+
+<br/>
+<br/>
+
+## Modal de detalhe do produto
+
+
+
+<img src="./public/images/modal-detalhe-produto.gif">
+
+<br/>
+<br/>
+
+## Opções do carrinho
+
+<img src="./public/images/carrinho-home.gif">
+
+<br />
+<hr/>
+
+## Carrinho Vazio
+[emptyCart](http://localhost:3000/emptyCart) - Carrinho Vazio
+
+<img src="./public/images/carrinho-vazio.gif">
+
+<br />
+<hr/>
+
+## Checkout
+[checkout](http://localhost:3000/checkout) - Checkout
+
+<img src="./public/images/checkout.gif">
+
+<br />
+<hr/>
+
+## Checkout
+[checkoutSuccess](http://localhost:3000/checkout) - Tela de Sucesso / Agradecimento
+
+<img src="./public/images/success.gif">
+
+<br />
+<hr/>
+
+## Login e Cadastro
+[login](http://localhost:3000/login) - Tela de Login / Cadastro
+
+<img src="./public/images/login-cadastro.gif">
+
+<br />
+<hr/>
 
 ## ✒️ Autor
 

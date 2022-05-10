@@ -59,7 +59,7 @@ Ferramentas que usei para este projeto:
 
 ## ✒️ Autor
 
-**André Albson** - *Desenvolvedor do projeto* - [umdesenvolvedor](https://github.com/andrealbson)
+**André Albson** - [Desenvolvedor Front-End](https://github.com/andrealbson)
 
 
 ---

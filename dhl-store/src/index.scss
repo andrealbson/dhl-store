@@ -208,7 +208,7 @@ footer {
           margin-top: 2.25px;
           transition: all 0.3s ease-in-out !important;
 
-          i {
+          svg {
             color: #646464;
           }
 
@@ -220,7 +220,7 @@ footer {
             border-radius: 50%;
             transform: scale(1.07);
 
-            i {
+            svg {
               color: #FFF !important;
             }
           }
@@ -342,7 +342,7 @@ footer {
       justify-content: space-between;
       margin-top: 0.5em;
 
-      i.fa-arrow-trend-down {
+      svg.fa-arrow-trend-down {
         color: #00b16a;
         transform: scaleX(-1);
         font-size: 0.9rem !important;

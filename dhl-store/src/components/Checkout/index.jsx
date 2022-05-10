@@ -4,9 +4,16 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import "../Checkout/style.scss";
 import formatCurrency from "../../util";
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { fas } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import "../../babel.config.js";
+import "../../babel-plugin-macros.config.js";
+import { faCcMastercard, faCcVisa } from "@fortawesome/free-brands-svg-icons";
+
+library.add(fas);
 
 export default class Checkout extends Component {
-
   constructor() {
     super();
     this.state = {
@@ -16,20 +23,20 @@ export default class Checkout extends Component {
 
   render() {
     const { cartItems } = this.props;
-    
+
     return (
       <>
-        <div className="breadcrumb" style={{marginTop: "-59px"}}>
+        <div className="breadcrumb" style={{ marginTop: "-59px" }}>
           <Link to="/home" className="breadcrumb__step">
             Página Inicial
           </Link>
-          <Link className="breadcrumb__step breadcrumb__step--active" to="/checkout">
+          <Link
+            className="breadcrumb__step breadcrumb__step--active"
+            to="/checkout"
+          >
             Checkout
           </Link>
-          <Link
-            to="/checkoutSuccess"
-            className="breadcrumb__step"
-          >
+          <Link to="/checkoutSuccess" className="breadcrumb__step">
             confirmado de Compra
           </Link>
         </div>
@@ -38,18 +45,21 @@ export default class Checkout extends Component {
             <div className="col-sm-5 col-md-5 ml-1">
               <div className="py-4 d-flex flex-row">
                 <h5>
-                  <span className="fa fa-check-square-o"></span>
+                  <span className="">
+                    <FontAwesomeIcon icon="fa-solid fa-shopping-bag" />
+                  </span>
+                  &nbsp;
                   <b>AndreStore</b> |{" "}
                 </h5>
                 <span className="pl-2">Pay</span>
               </div>
               <h4 className="green">
-              {formatCurrency(
-                      cartItems.reduce(
-                        (acc, item) => acc + item.attributes.price * item.count,
-                        0
-                      )
-                    )}
+                {formatCurrency(
+                  cartItems.reduce(
+                    (acc, item) => acc + item.attributes.price * item.count,
+                    0
+                  )
+                )}
               </h4>
               <hr />
               <h4 className="text-dark">Instruções de Frete & Pagamento</h4>
@@ -57,7 +67,7 @@ export default class Checkout extends Component {
                 <div>
                   <p>
                     <b>Frete padrão:</b>
-                    <br /> 
+                    <br />
                     <span className="green">R$ 71,60</span>
                   </p>
                 </div>
@@ -96,7 +106,7 @@ export default class Checkout extends Component {
                     <div className="rounded border d-flex w-100 px-2">
                       <div className="pt-2">
                         <p>
-                          <i className="fa fa-cc-visa text-primary pr-2 fa-lg"></i>
+                          <FontAwesomeIcon icon={faCcVisa} size="lg" />
                           &nbsp;Visa Débito Card
                         </p>
                       </div>
@@ -113,6 +123,7 @@ export default class Checkout extends Component {
                       <div className="pt-2">
                         <p>
                           <i className="fa fa-cc-mastercard fa-lg pr-2"></i>
+                          <FontAwesomeIcon icon={faCcMastercard} size="lg" />
                           &nbsp;Mastercard Office
                         </p>
                       </div>
@@ -137,8 +148,8 @@ export default class Checkout extends Component {
                     to="/"
                     className="btn btn-sm btn-danger btn-cancelar-top-checkout"
                   >
-                    <i className="fa-solid fa-arrow-left"></i>&nbsp;Cancelar e
-                    voltar para a página inicial
+                    <FontAwesomeIcon icon="fa-solid fa-arrow-left" />
+                    &nbsp;Cancelar e voltar para a página inicial
                   </Link>
                 </h6>
               </div>
@@ -146,37 +157,41 @@ export default class Checkout extends Component {
                 <div className="p-2 ml-3">
                   <h4 className="text-center">Resumo do pedido</h4>
                 </div>
-                <ul className="cart-items" style={{marginTop: '-1em'}}>
-                {cartItems.map((item) => (
-                  <li key={item.id}>
-                    <div className="img-cart-items-list">
-                      <img
-                        src={item.attributes.link_image}
-                        alt={item.attributes.title}
-                      ></img>
-                    </div>
-                    <div>
-                      <div className="cart-items-list-title">
-                        {item.attributes.title}
+                <ul className="cart-items" style={{ marginTop: "-1em" }}>
+                  {cartItems.map((item) => (
+                    <li key={item.id}>
+                      <div className="img-cart-items-list">
+                        <img
+                          src={item.attributes.link_image}
+                          alt={item.attributes.title}
+                        ></img>
                       </div>
-                      <div className="right">
-                        {formatCurrency(item.attributes.price)}&nbsp; <span className="badge bg-danger">x{item.count}</span>
+                      <div>
+                        <div className="cart-items-list-title">
+                          {item.attributes.title}
+                        </div>
+                        <div className="right">
+                          {formatCurrency(item.attributes.price)}&nbsp;{" "}
+                          <span className="badge bg-danger">x{item.count}</span>
+                        </div>
                       </div>
-                    </div>
-                  </li>
-                ))}
-              </ul>
-                
+                    </li>
+                  ))}
+                </ul>
+
                 <div className="border-top px-4 mx-3"></div>
                 <div className="p-2 d-flex pt-3">
                   <div className="col-8">Valor Total de Produtos:</div>
                   <div className="ml-auto">
-                    <b>{formatCurrency(
-                      cartItems.reduce(
-                        (acc, item) => acc + item.attributes.price * item.count,
-                        0
-                      )
-                    )}</b>
+                    <b>
+                      {formatCurrency(
+                        cartItems.reduce(
+                          (acc, item) =>
+                            acc + item.attributes.price * item.count,
+                          0
+                        )
+                      )}
+                    </b>
                   </div>
                 </div>
                 <div className="p-2 d-flex">
@@ -195,12 +210,13 @@ export default class Checkout extends Component {
                   </div>
                   <div className="ml-auto">
                     <b className="green">
-                    {formatCurrency(
-                      cartItems.reduce(
-                        (acc, item) => acc + item.attributes.price * item.count,
-                        0
-                      ) + 71.60
-                    )}
+                      {formatCurrency(
+                        cartItems.reduce(
+                          (acc, item) =>
+                            acc + item.attributes.price * item.count,
+                          0
+                        ) + 71.6
+                      )}
                     </b>
                   </div>
                 </div>

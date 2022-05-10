@@ -1,7 +1,14 @@
 import React, { Component } from "react";
 import formatCurrency from "../../util";
 import { Fade } from "react-reveal";
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { fas } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import "../../babel.config.js";
+import "../../babel-plugin-macros.config.js";
+
+library.add(fas);
 
 export default class Cart extends Component {
   render() {
@@ -45,7 +52,7 @@ export default class Cart extends Component {
                           className="btn btn-sm btn-danger"
                           onClick={() => this.props.removeFromCart(item)}
                         >
-                          <i className="fa-solid fa-xmark"></i>
+                          <FontAwesomeIcon icon="fa-solid fa-xmark" />
                         </button>
                       </div>
                     </div>
@@ -71,7 +78,9 @@ export default class Cart extends Component {
               </div>
               <div>
                 <Link to="/checkout">
-                  <button className="button primary btn-pay-now">Pagar Agora</button>
+                  <button className="button primary btn-pay-now">
+                    Pagar Agora
+                  </button>
                 </Link>
               </div>
             </div>

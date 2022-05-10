@@ -4,6 +4,13 @@ import "bootstrap-icons/font/bootstrap-icons.css";
 import "../Success/style.scss";
 import { Alert } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { fas } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import "../../babel.config.js";
+import "../../babel-plugin-macros.config.js";
+
+library.add(fas);
 
 export default class CheckOutSuccess extends Component {
   render() {
@@ -36,7 +43,7 @@ export default class CheckOutSuccess extends Component {
             <div className="row g-0">
               <div className="col-md-12">
                 <Alert variant="success">
-                  <i className="fa-solid fa-circle-check fa-6x icone-success"></i>
+                  <FontAwesomeIcon icon="fa-solid fa-circle-check" size="6x" className="icone-success" />
                   <Alert.Heading>O seu pagamento foi confirmado!</Alert.Heading>
                   <p>
                     Obrigado por comprar conosco. Iremos preparar o seu pedido e

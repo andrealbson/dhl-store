@@ -2,6 +2,14 @@ import React, { Component } from "react";
 import formatCurrency from "../../util";
 import { Fade, Zoom } from "react-reveal";
 import Modal from "react-modal/lib/components/Modal";
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { fas } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import "../../babel.config.js";
+import "../../babel-plugin-macros.config.js";
+
+
+library.add(fas);
 export default class Products extends Component {
   constructor(props) {
     super(props);
@@ -54,14 +62,14 @@ export default class Products extends Component {
                     </div>
                     <div className="content-rating-spins-product">
                       <div>
-                        <i className="fa-solid fa-star"></i>
-                        <i className="fa-solid fa-star"></i>
-                        <i className="fa-solid fa-star"></i>
-                        <i className="fa-solid fa-star"></i>
-                        <i className="fa-solid fa-star-half-stroke"></i>
+                      <FontAwesomeIcon icon="fa-solid fa-star" />
+                      <FontAwesomeIcon icon="fa-solid fa-star" />
+                      <FontAwesomeIcon icon="fa-solid fa-star" />
+                      <FontAwesomeIcon icon="fa-solid fa-star" />
+                      <FontAwesomeIcon icon="fa-solid fa-star-half-stroke" />
                       </div>
                       <div className="">
-                        <i className="fa-solid fa-bolt-lightning"></i>
+                        <FontAwesomeIcon icon="fa-solid fa-bolt-lightning" />
                         &nbsp;APENAS HOJE!
                       </div>
                     </div>
@@ -74,7 +82,8 @@ export default class Products extends Component {
                         </div>
                       </div>
                       <div className="promotional-badge">
-                        <i className="fa-solid fa-arrow-trend-down"></i>&nbsp;
+                        <FontAwesomeIcon icon="fa-solid fa-arrow-trend-down" />
+                        &nbsp;
                         {Math.random().toFixed(1) * (20 - 0)}% OFF
                       </div>
                     </div>
@@ -93,14 +102,14 @@ export default class Products extends Component {
                       <button
                         className=""
                       >
-                        <i className="fa-solid fa-eye fa-lg"></i>
+                        <FontAwesomeIcon icon="fa-solid fa-eye" />
                       </button>
                     </div>
                     <div>
                       <button
                         className=""
                       >
-                        <i className="fa-solid fa-heart fa-lg"></i>
+                        <FontAwesomeIcon icon="fa-solid fa-heart" />
                       </button>
                     </div>
                     <div>
@@ -108,7 +117,7 @@ export default class Products extends Component {
                         onClick={() => this.props.addToCart(product)}
                         className=""
                       >
-                        <i className="fa-solid fa-cart-plus fa-lg"></i>
+                        <FontAwesomeIcon icon="fa-solid fa-cart-plus" />
                       </button>
                     </div>
                   </div>

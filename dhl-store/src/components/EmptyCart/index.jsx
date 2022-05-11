@@ -5,6 +5,13 @@ import "bootstrap-icons/font/bootstrap-icons.css";
 import "../EmptyCart/style.scss";
 import imageEmpryCart from "../../images/empty.png";
 import { Alert, Button } from "react-bootstrap";
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { fas } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import "../../babel.config.js";
+import "../../babel-plugin-macros.config.js";
+
+library.add(fas);
 
 export default class Checkout extends Component {
   constructor() {
@@ -40,7 +47,8 @@ export default class Checkout extends Component {
                       to="/home"
                       style={{ textDecoration: "none" }}
                     >
-                      <i class="fa-solid fa-house text-warning"></i>&nbsp;
+                      <FontAwesomeIcon icon="fa-solid fa-house" className="text-warning" />
+                      &nbsp;
                       Voltar para a página inicial
                     </Link>
                   </Button>
@@ -56,7 +64,7 @@ export default class Checkout extends Component {
                   <Link to="/#" style={{ textDecoration: "none" }}>
                     <strong className="text-primary text-link">
                       &nbsp;Suporte&nbsp;
-                      <i class="fa-solid fa-circle-question"></i>
+                      <FontAwesomeIcon icon="fa-solid fa-circle-question" />
                     </strong>
                   </Link>
                 </small>

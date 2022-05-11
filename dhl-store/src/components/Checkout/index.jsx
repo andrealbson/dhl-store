@@ -122,7 +122,6 @@ export default class Checkout extends Component {
                     <div className="rounded  d-flex w-100 px-2">
                       <div className="pt-2">
                         <p>
-                          <i className="fa fa-cc-mastercard fa-lg pr-2"></i>
                           <FontAwesomeIcon icon={faCcMastercard} size="lg" />
                           &nbsp;Mastercard Office
                         </p>
